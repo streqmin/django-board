@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="none" />
+        <meta name="keywords" content="none" />
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet"
+              type="text/css"
+              href="{% static 'bootstrap.min.css' %}">
+        <title>HTML</title>
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+    </body>
+</html>

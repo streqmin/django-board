@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="ko">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="none" />
+            <meta name="keywords" content="none" />
+            <title>HTML</title>
+        </head>
+        <body>
+            <div class="container my-3">
+                <table class="table">
+                    <thead>
+                        <tr class="table-dark">
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성일시</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if question_list %}
+                            {% for question in question_list %}
+                                <tr>
+                                    <td>{{ forloop.counter }}</td>
+                                    <td>
+                                        <a href="{% url 'pybo:detail' question.id %}">{{ question.subject }}</a>
+                                    </td>
+                                    <td>{{ question.create_date }}</td>
+                                </tr>
+                            {% endfor %}
+                        {% else %}
+                            <tr>
+                                <td colspan="3">질문이 없습니다.</td>
+                            </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </body>
+    </html>
+{% endblock content %}
