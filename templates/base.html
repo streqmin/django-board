@@ -11,9 +11,11 @@
         <link rel="stylesheet"
               type="text/css"
               href="{% static 'bootstrap.min.css' %}">
+        <script src="{% static 'bootstrap.min.js' %}"></script>
         <title>HTML</title>
     </head>
     <body>
+        {% include 'navbar.html' %}
         {% block content %}{% endblock %}
     </body>
 </html>
