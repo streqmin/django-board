@@ -15,4 +15,19 @@ urlpatterns = [
     path("set-session/", views.set_session_view, name="set_session"),
     path("get-session/", views.get_session_view, name="get_session"),
     path("delete-session/", views.delete_session_view, name="delete_session"),
+    path(
+        "question/modify/<int:question_id>/",
+        views.question_modify,
+        name="question_modify",
+    ),
+    path(
+        "answer/modify/<int:answer_id>/",
+        views.answer_modify,
+        name="answer_modify",
+    ),
+    path(
+        "question/delete/<int:question_id>/",
+        views.question_delete,
+        name="question_delete",
+    ),
 ]
