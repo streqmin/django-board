@@ -1,7 +1,7 @@
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404, render
-from models import *
-from forms import *
+from ..models import *
+from ..forms import *
 
 
 def index(request):
