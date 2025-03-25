@@ -39,4 +39,10 @@ urlpatterns = [
         answer_views.answer_delete,
         name="answer_delete",
     ),
+    path(
+        "question/vote/<int:question_id>/",
+        question_views.question_vote,
+        name="question_vote",
+    ),
+    path("answer/vote/<int:answer_id>/", answer_views.answer_vote, name="answer_vote"),
 ]
